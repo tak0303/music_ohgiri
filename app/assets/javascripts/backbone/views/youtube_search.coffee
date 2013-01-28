@@ -1,6 +1,11 @@
-class Ohgiri.Views.YoutubeSearch extends Backbone.View
+_.templateSettings =
+  interpolate: /\{\{(.+?)\}\}/g
+  evaluate: /\{%(.+?)%\}/g
+  escape: /\{%-(.+?)%\}/g
 
+class Ohgiri.Views.YoutubeSearch extends Backbone.View
   initialize: ->
+    @template = _.template $("#search_tmpl").text()
 
   events:
     'keydown #music_search': 'search'
@@ -9,9 +14,8 @@ class Ohgiri.Views.YoutubeSearch extends Backbone.View
     if e.keyCode == 13
       query = _.escape($(e.target).val())
       return false if query.length == 0
-      result = (new Ohgiri.Collections.Youtube).search query
-      console.log result
-      # return false if result.length == 0
-      for i in result
-        console.log i
-        console.log result result[i]
+      youtube = new Ohgiri.Collections.Youtube
+      _.map(youtube.search(query).toJSON(), (data) => @render(data))
+
+  render: (data) =>
+    $("#search_result").append @template "data":data

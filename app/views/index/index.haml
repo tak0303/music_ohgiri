@@ -6,9 +6,42 @@
     = partial 'layouts/header'
     .container
       %input#music_search{type: "text", placeholder:"search your music" }
+      #search_result
+
+  %script{type:'text/template', id: 'search_tmpl'}
+    %div.result_box
+      %div
+        %img{:src => "{{data.thumbnail}}", :alt => "{{data.title}}", height: '30px'}
+      %div
+        %p {{data.title}}
 
 :javascript
   $(function(){
     window.router = new Ohgiri.Routers.Router()
     Backbone.history.start();
   })
+
+:css
+  .result_box{
+    width: 450px;
+    height: 36px;
+    margin-top: 10px;
+  }
+  .result_box:hover{
+    background-color: #e1e1e1;
+  }
+  .result_box:after{
+    clear: both;
+  }
+  .result_box div{
+    height: 35px;
+    float: left;
+    padding-left: 10px;
+  }
+  .result_box div img{
+    margin-top: 3px;
+  }
+  .result_box p{
+    float: left;
+    font-size: 10px;
+  }
