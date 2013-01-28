@@ -15,7 +15,7 @@ gem 'haml'
 gem 'sqlite3'
 gem 'sequel'
 gem 'libxml-ruby'
-
+gem 'youtube_it'
 gem 'pry-padrino'
 
 gem 'padrino-sprockets', :git => "https://github.com/nightsailer/padrino-sprockets.git", :require => "padrino/sprockets"
