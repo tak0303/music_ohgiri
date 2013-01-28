@@ -1,0 +1,14 @@
+%html
+  %head
+    %script{src:'/assets/application.js'}
+
+  %body
+    = partial 'layouts/header'
+    .container
+      %input#music_search{type: "text", placeholder:"search your music" }
+
+:javascript
+  $(function(){
+    window.router = new Ohgiri.Routers.Router()
+    Backbone.history.start();
+  })
