@@ -27,6 +27,10 @@ gem 'therubyracer', :require => 'v8'
 # Padrino Stable Gem
 gem 'padrino', '0.10.7'
 
+#authenticate with facebook
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
 
