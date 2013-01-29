@@ -3,4 +3,5 @@ class Ohgiri.Routers.Router extends Backbone.Router
     "" : "index"
 
   index: ->
-    searchView = new Ohgiri.Views.YoutubeSearch {el: ".container"}
+    searchView  = new Ohgiri.Views.YoutubeSearch {el: ".container"}
+    addSongView = new Ohgiri.Views.AddSongs {el:".container"}
