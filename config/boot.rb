@@ -7,10 +7,10 @@ require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)
 
-# Padrino.before_load do
-#   Encoding.default_internal = nil
-#   Encoding.default_external = 'UTF-8'
-# end
+Padrino.before_load do
+  Encoding.default_internal = nil
+  Encoding.default_external = 'UTF-8'
+end
 
 ##
 # ## Enable devel logging
