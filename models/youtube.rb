@@ -12,7 +12,7 @@ class Youtube < ActiveRecord::Base
                       title:     "#{video.title}",
                       video_url: "#{video.embed_url}",
                       thumbnail: "#{video.thumbnails[1].url}",
-                      video_id:  "#{video.video_id}"
+                      video_id:  "#{video.unique_id}"
                      }
     end
 
