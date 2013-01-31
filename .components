@@ -1,8 +1,0 @@
----
-:orm: sequel
-:test: none
-:mock: none
-:script: jquery
-:renderer: haml
-:stylesheet: sass
-:admin_renderer: haml
