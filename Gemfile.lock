@@ -22,21 +22,15 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
-    chunky_png (1.2.7)
     coderay (1.0.8)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
-    compass (0.12.2)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
-    fssm (0.2.9)
     haml (3.1.7)
     hashie (1.2.0)
     hike (1.2.1)
@@ -153,7 +147,6 @@ DEPENDENCIES
   activerecord
   bcrypt-ruby
   coffee-script
-  compass
   haml
   libxml-ruby
   omniauth
@@ -162,6 +155,7 @@ DEPENDENCIES
   padrino-sprockets!
   pry-padrino
   rake
+  sass
   sinatra-flash
   sqlite3
   therubyracer

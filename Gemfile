@@ -9,8 +9,7 @@ gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
-# gem 'sass'
-gem 'compass'
+gem 'sass'
 gem 'haml'
 gem 'activerecord', :require => "active_record"
 gem 'sqlite3'
