@@ -11,8 +11,6 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 # Component requirements
 gem 'sass'
 gem 'haml'
-gem 'activerecord', :require => "active_record"
-gem 'sqlite3'
 gem 'libxml-ruby'
 gem 'youtube_it'
 gem 'pry-padrino'
@@ -27,6 +25,10 @@ gem 'omniauth-facebook'
 # Padrino Stable Gem
 gem 'padrino', '0.10.7'
 
+gem 'activerecord', :require => "active_record"
+group :development, :test do
+  gem 'sqlite3'
+end
 group :production do
  gem 'pg'
 end
