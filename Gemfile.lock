@@ -94,6 +94,7 @@ GEM
     padrino-mailer (0.10.7)
       mail (~> 2.3.0)
       padrino-core (= 0.10.7)
+    pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.11.4)
       coderay (~> 1.0.5)
@@ -153,6 +154,7 @@ DEPENDENCIES
   omniauth-facebook
   padrino (= 0.10.7)
   padrino-sprockets!
+  pg
   pry-padrino
   rake
   sass

@@ -27,6 +27,10 @@ gem 'omniauth-facebook'
 # Padrino Stable Gem
 gem 'padrino', '0.10.7'
 
+group :production do
+ gem 'pg'
+end
+
 gem 'bcrypt-ruby', :require => "bcrypt"
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
