@@ -1,10 +1,11 @@
 = partial 'layouts/header'
 - if current_account.blank?
   .container
-    .hero-unit
-      %h1 Music_Ohgiri
-      %p 今日のお題に沿って、一番イケてる選曲を出来るのはだれだ！？
+    %h1 Music_Ohgiri
+    %p 今日のお題に沿って、一番イケてる選曲を出来るのはだれだ！？
 - else
-  ログイン後の処理
+  .container
+    %h1#todays_topic #{TodaysTopic.new.get.topic}
+
 
 = partial 'layouts/footer'

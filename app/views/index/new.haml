@@ -3,14 +3,17 @@
     %script{src:'/assets/application.js'}
     %meta{charset:'utf-8'}
 
-  %body
-    = TodaysTopic.new.get.topic
-    = partial 'layouts/header'
-    .container
-      %input#music_search{type: "text", placeholder:"search your music" }
+  = partial 'layouts/header'
+  .container
+    %p#todays_topic #{TodaysTopic.new.get.topic}
+    %input#music_search{type: "text", placeholder:"search your music" }
+    #search_container
       #search_result
       #songs_list
 
+  = partial 'layouts/footer'
+
+  / template-------------------------------
   %script{type:'text/template', id: 'search_tmpl'}
     %div.result_box{:"data-video-id" => "{{data.video_id}}", :"data-topic-id" => "#{TodaysTopic.new.get.id}" }
       %div.img
@@ -21,6 +24,7 @@
 
   %script{type:'text/template', id: 'load_more_tmpl'}
     %input#load_more{ :type => "button", :"data-next-page" => "{{nextPage}}", value: 'load more' }
+  /-------------------------------------template
 
 :javascript
   $(function(){
@@ -28,50 +32,3 @@
     Backbone.history.start();
   })
 
-:css
-  #load_more{
-    margin-bottom: 50px;
-  }
-  #search_result{
-    float: left;
-    width: 450px;
-    height: 500px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  #songs_list{
-    float: left;
-    background-color: #ccc;
-    width: 450px;
-    height: 500px;
-    overflow: scroll;
-  }
-  .result_box{
-    width: 450px;
-    height: 36px;
-    margin-top: 10px;
-  }
-  .result_box:hover{
-    background-color: #e1e1e1;
-  }
-  .result_box:after{
-    clear: both;
-  }
-  .result_box div{
-    float: left;
-  }
-  .result_box .text{
-    height: 35px;
-    padding-left: 10px;
-    width: 200px;
-  }
-  .result_box .text p{
-    text-overflow: ellipsis;
-  }
-  .result_box div img{
-    margin-top: 3px;
-  }
-  .result_box p{
-    float: left;
-    font-size: 10px;
-  }
