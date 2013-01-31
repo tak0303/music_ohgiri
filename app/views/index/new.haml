@@ -4,9 +4,7 @@
     %meta{charset:'utf-8'}
 
   %body
-    = link_to 'Login with Facebook', '/auth/facebook'
-    = link_to 'Logout', '/destroy'
-
+    = TodaysTopic.new.get.topic
     = partial 'layouts/header'
     .container
       %input#music_search{type: "text", placeholder:"search your music" }
@@ -14,7 +12,7 @@
       #songs_list
 
   %script{type:'text/template', id: 'search_tmpl'}
-    %div.result_box{:"data-video-id" => "{{data.video_id}}"}
+    %div.result_box{:"data-video-id" => "{{data.video_id}}", :"data-topic-id" => "#{TodaysTopic.new.get.id}" }
       %div.img
         %img{:src => "{{data.thumbnail}}", :alt => "{{data.title}}", height: '30px'}
       %div.text
