@@ -4,9 +4,9 @@ class TodaysTopic < ActiveRecord::Base
   def get
     if last_day_of_the_month? then TodaysTopic.find(:last) end
     if is_today?
-      TodaysTopic.find(id: Date.today.day).topic
+      TodaysTopic.find(Date.today.day)
     else
-      TodaysTopic.find(id: Date.today.day - 1).topic
+      TodaysTopic.find(Date.today.day - 1)
     end
   end
 
