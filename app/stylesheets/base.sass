@@ -1,0 +1,82 @@
+// @import zurui-sass
+
+body
+  padding: 0
+  margin: 0
+.container
+  width: 900px
+  margin: 0 auto
+
+#header
+  width: 100%
+  height: 50px
+  background-color: #ccc
+  margin: 0px
+  padding: 0px
+  .container
+    #account
+      float: right
+      line-height: 50px
+      text-decoration: none
+      color: #108ee1
+
+#load_more
+  margin-bottom: 50px
+
+#todays_topic
+  font-size: 25px
+  width: 100%
+  text-align: center
+
+#music_search
+  font-size: 13px
+  width: 400px
+  height: 30px
+  margin: 0 0 30px 25px
+  position: relative
+  left: 25%
+  text-align: center
+
+#search_container
+  width: auto
+  height: auto
+
+
+#search_result
+  background-color: #ddd
+  float: left
+  width: 50%
+  height: 500px
+  overflow-y: scroll
+  overflow-x: hidden
+
+
+#songs_list
+  float: left
+  background-color: #ccc
+  width: 50%
+  height: 500px
+  overflow: scroll
+
+.result_box
+  // @include zurui-gradient-top-lighten
+  width: 450px
+  height: 36px
+  margin: 10px 0 0 20px
+  &:hover
+    background-color: #e1e1e1
+  &:after
+    clear: both
+  p
+    float: left
+    font-size: 10px
+  div
+    float: left
+    img
+      margin-top: 3px
+  .text
+    height: 35px
+    padding-left: 10px
+    width: 300px
+    p
+      text-overflow: ellipsis

@@ -1,0 +1,87 @@
+/*
+Syntax error: Undefined mixin 'filter-gradient'.
+        on line 31 of /private/var/www/music_ohgiri/app/stylesheets/_zurui-sass.sass, in `filter-gradient'
+        from line 31 of /private/var/www/music_ohgiri/app/stylesheets/_zurui-sass.sass, in `zurui-gradient-top-lighten'
+        from line 62 of /private/var/www/music_ohgiri/app/stylesheets/base.sass
+
+26: #todays_topic
+27:   font-size: 25px
+28:   width: 100%
+29:   text-align: center
+30: 
+31: #music_search
+32:   font-size: 13px
+33:   width: 400px
+34:   height: 30px
+35:   margin: 0 0 30px 25px
+36:   position: relative
+
+Backtrace:
+/private/var/www/music_ohgiri/app/stylesheets/_zurui-sass.sass:31:in `filter-gradient'
+/private/var/www/music_ohgiri/app/stylesheets/_zurui-sass.sass:31:in `zurui-gradient-top-lighten'
+/private/var/www/music_ohgiri/app/stylesheets/base.sass:62
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:251:in `visit_mixin'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:266:in `block (3 levels) in visit_mixin'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:266:in `map'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:266:in `block (2 levels) in visit_mixin'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:266:in `block in visit_mixin'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:68:in `perform_arguments'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:261:in `visit_mixin'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/root_node.rb:20:in `render'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/engine.rb:315:in `_render'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/engine.rb:262:in `render'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/rack.rb:51:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/rack-1.5.1/lib/rack/head.rb:11:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/rack-1.5.1/lib/rack/methodoverride.rb:21:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/padrino-core-0.10.7/lib/padrino-core/reloader.rb:250:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/padrino-core-0.10.7/lib/padrino-core/logger.rb:388:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sinatra-1.3.4/lib/sinatra/showexceptions.rb:21:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/rack-1.5.1/lib/rack/session/abstract/id.rb:217:in `context'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/rack-1.5.1/lib/rack/session/abstract/id.rb:212:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sinatra-1.3.4/lib/sinatra/base.rb:1417:in `block in call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sinatra-1.3.4/lib/sinatra/base.rb:1499:in `synchronize'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/sinatra-1.3.4/lib/sinatra/base.rb:1417:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/padrino-core-0.10.7/lib/padrino-core/router.rb:83:in `block in call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/padrino-core-0.10.7/lib/padrino-core/router.rb:76:in `each'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/padrino-core-0.10.7/lib/padrino-core/router.rb:76:in `call'
+/Users/tak0303/.rvm/gems/ruby-1.9.3-p362/gems/rack-1.5.1/lib/rack/handler/webrick.rb:60:in `service'
+/Users/tak0303/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/tak0303/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/tak0303/.rvm/rubies/ruby-1.9.3-p362/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'filter-gradient'.\A         on line 31 of /private/var/www/music_ohgiri/app/stylesheets/_zurui-sass.sass, in `filter-gradient'\A         from line 31 of /private/var/www/music_ohgiri/app/stylesheets/_zurui-sass.sass, in `zurui-gradient-top-lighten'\A         from line 62 of /private/var/www/music_ohgiri/app/stylesheets/base.sass\A \A 26: #todays_topic\A 27:   font-size: 25px\A 28:   width: 100%\A 29:   text-align: center\A 30: \A 31: #music_search\A 32:   font-size: 13px\A 33:   width: 400px\A 34:   height: 30px\A 35:   margin: 0 0 30px 25px\A 36:   position: relative"; }
