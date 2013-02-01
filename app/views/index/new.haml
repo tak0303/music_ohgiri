@@ -5,13 +5,14 @@
 
   = partial 'layouts/header'
   .container
-    %p#todays_topic #{TodaysTopic.new.get.topic}
+    %p.ribbon
+      %strong.ribbon-content<
+      %span #{TodaysTopic.new.get.topic}
     %input#music_search{type: "text", placeholder:"search your music" }
     #search_container
       #search_result
       #songs_list
 
-  = partial 'layouts/footer'
 
   / template-------------------------------
   %script{type:'text/template', id: 'search_tmpl'}

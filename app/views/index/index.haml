@@ -1,11 +1,18 @@
 = partial 'layouts/header'
 - if current_account.blank?
   .container
-    %h1 Music_Ohgiri
-    %p 今日のお題に沿って、一番イケてる選曲を出来るのはだれだ！？
+    %p.ribbon
+      %strong.ribbon-content<
+      今日のお題に沿って、一番イケてる選曲を出来るのはだれだ！？
+    = partial 'layouts/footer'
 - else
   .container
-    %h1#todays_topic #{TodaysTopic.new.get.topic}
+    %p#theme 今日のテーマ
+    %p.ribbon
+      %strong.ribbon-content<
+      #{TodaysTopic.new.get.topic}
 
 
-= partial 'layouts/footer'
+    %a#go{:href => "/new"} 大喜利を投稿する
+
+    = partial 'layouts/footer'
