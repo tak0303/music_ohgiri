@@ -6,7 +6,11 @@ class TodaysTopic < ActiveRecord::Base
     if is_today?
       TodaysTopic.find(Date.today.day)
     else
-      TodaysTopic.find(Date.today.day - 1)
+      if (Date.today.day - 1) < 1
+        TodaysTopic.find 1
+      else
+        TodaysTopic.find(Date.today.day-1)
+      end
     end
   end
 
