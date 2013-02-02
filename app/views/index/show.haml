@@ -1,0 +1,21 @@
+= partial 'layouts/header'
+.container
+  %p.ribbon
+    %strong.ribbon-content<
+    #{TodaysTopic.new.get.topic}
+  .author>
+    %p.img_wrap
+      %img{:src => "https://graph.facebook.com/#{current_account.uid}/picture?type=small"}<
+    %p.name #{current_account.name}
+  #list_wrap
+    %ul.topic_song_list
+      - @list.videos.each do |video|
+        %div.cont
+          %a{:href => "#{video.embed_url}", :class => "youtube cboxElement"}
+            %img{:src => "#{video.thumbnail_url}", :alt => "#{video.title}"}
+          %span #{video.title}
+
+:javascript
+  $(document).ready(function(){
+    $(".youtube").colorbox({iframe:true, innerWidth:853, innerHeight:480});
+  });

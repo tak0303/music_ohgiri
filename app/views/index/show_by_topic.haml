@@ -1,0 +1,18 @@
+= partial 'layouts/header'
+.container
+  %p#theme 今日のテーマ
+  %p.ribbon
+    %strong.ribbon-content<
+    #{TodaysTopic.find(@topic_id).topic}
+  #playlists
+    - @list_by_topic.each do |list|
+      - if list.videos.present?
+        %a{:href => "/show/#{list.id}"}
+          .songs_list
+            .list_inner
+              %ul
+                - list.videos.each do |video|
+                  %li<
+                    %img{:alt => "#{video.title}", :src => "#{video.thumbnail_url}"}
+
+
