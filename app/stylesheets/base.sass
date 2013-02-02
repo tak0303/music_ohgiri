@@ -1,4 +1,5 @@
 body
+  font-family: "ヒラギノ明朝 Pro W6","Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝"
   padding: 0
   margin: 0
 .container
@@ -11,7 +12,6 @@ body
   background-color: #ffffff
   margin: 0px
   padding: 0px
-  box-shadow
   box-shadow: 2px 4px 20px #e3e3e3
   -moz-box-shadow: 2px 4px 20px #e3e3e3
   -webkit-box-shadow: 2px 4px 20px #e3e3e3
@@ -23,6 +23,8 @@ body
       position: relative
       left: 41%
     #account
+      &:hover
+        background-color: #009bba
       background-color: #32acba
       padding: 3px 7px
       margin-top: 7px
@@ -33,10 +35,9 @@ body
       font-size: 15px
       border-radius: 8px
 #theme
+  margin: 30px 0  -20px
   text-align: center
   font-size: 18px
-
-  font-family: "ヒラギノ明朝 Pro W6","Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝"
 
 
 #load_more
@@ -112,7 +113,6 @@ body
   text-align: center
   padding: 1em 2em
   margin: 3em auto 3em
-  font-family: "ヒラギノ明朝 Pro W6","Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝"
 
 .ribbon:before, .ribbon:after
   content: ""
@@ -129,16 +129,18 @@ body
   width: 900px
 
 #go
+  &:hover
+    background-color: #009bba
+  float: right
   background-color: #32acba
   padding: 3px 7px
-  margin-top: 7px
+  margin: 7px 15px 0 0
   float: right
   line-height: 30px
   text-decoration: none
   color: #fff
   font-size: 15px
   border-radius: 8px
-  font-family: "ヒラギノ明朝 Pro W6","Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝"
 
 
 .ribbon:before
@@ -166,3 +168,65 @@ body
 .ribbon .ribbon-content:after
   right: 0
   border-width: 1em 1em 0 0
+#playlists
+  width: 720px
+  margin: 0 auto
+
+.songs_list
+  p
+    clear: both
+    width: 100%
+    text-align: center
+  float: left
+  margin: 10px
+  width: 220px
+  height: 200px
+  overflow-y: scroll
+  overflow-x: hidden
+  background-color: #fff
+  border: solid 1px #ccc
+  box-shadow: 2px 4px 20px #e3e3e3
+  -moz-box-shadow: 2px 4px 20px #e3e3e3
+  -webkit-box-shadow: 2px 4px 20px #e3e3e3
+  .list_inner
+    width: 198px
+    margin: 0 auto
+    overflow: hidden
+
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin: 10px 5px
+      float: left
+      list-style-type: none
+
+.author
+  width: 200px
+  margin: 0 auto
+  p.img_wrap
+    width: 50px
+    margin: -20px auto 0
+    height: 50px
+    img
+      border-radius: 30px
+  .name
+    text-align: center
+    margin: 10px
+    height: 50px
+
+.topic_song_list
+  padding: 0
+  div
+    margin: 0 20px
+    float: left
+    width: 320px
+    img
+    span
+      font-size: 13px
+
+  margin: 0 auto
+
+#list_wrap
+  margin: 0 auto
+  width: 720px

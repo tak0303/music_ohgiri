@@ -12,14 +12,22 @@
     #search_container
       #search_result
       #songs_list
+        - if get_playlist_by_topic && get_playlist_by_topic.videos
+          - get_playlist_by_topic.videos.each do |video|
+            .result_box{:"data-video-id" => "#{video.video_id}", :"data-topic-id" => "#{TodaysTopic.new.get.id}" }
+              %div.img
+                %img{:src => "#{video.thumbnail_url}", :alt => "#{video.title}", height: '30px'}
+              .text
+                %p #{video.title}
+              %input.remove_song{:type => "button", :value => 'remove'}
 
 
   / template-------------------------------
   %script{type:'text/template', id: 'search_tmpl'}
-    %div.result_box{:"data-video-id" => "{{data.video_id}}", :"data-topic-id" => "#{TodaysTopic.new.get.id}" }
+    .result_box{:"data-video-id" => "{{data.video_id}}", :"data-topic-id" => "#{TodaysTopic.new.get.id}" }
       %div.img
         %img{:src => "{{data.thumbnail}}", :alt => "{{data.title}}", height: '30px'}
-      %div.text
+      .text
         %p {{data.title}}
       %input.add_song{:type => "button", :value => 'add'}
 

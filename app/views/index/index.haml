@@ -11,8 +11,14 @@
     %p.ribbon
       %strong.ribbon-content<
       #{TodaysTopic.new.get.topic}
-
-
-    %a#go{:href => "/new"} 大喜利を投稿する
-
-    = partial 'layouts/footer'
+    #playlists
+      - if get_all_playlist_by_topic.present?
+        - get_all_playlist_by_topic.each do |list|
+          - if list.videos.present?
+            %a{:href => "/show/#{list.id}"}
+              .songs_list
+                .list_inner
+                  %ul
+                    - list.videos.each do |video|
+                      %li<
+                        %img{:alt => "#{video.title}", :src => "#{video.thumbnail_url}"}

@@ -7,8 +7,10 @@
   %body
     #header
       .container
-        %img{:src => "/images/logo.png", id: "logo"}
+        %a{:href => "/"}
+          %img{:src => "/images/logo.png", id: "logo"}
         - if current_account.blank?
           = link_to 'Login with Facebook', '/auth/facebook', :id => 'account'
         - else
           = link_to 'Logout', '/logout', :id => 'account'
+          %a#go{:href => "/new"} 大喜利を投稿する
