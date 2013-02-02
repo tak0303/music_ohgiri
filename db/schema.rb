@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 10) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -35,10 +35,13 @@ ActiveRecord::Schema.define(:version => 8) do
   end
 
   create_table "videos", :force => true do |t|
-    t.integer  "video_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "video_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.integer  "playlist_id"
+    t.string   "title"
+    t.string   "thumbnail_url"
+    t.string   "embed_url"
   end
 
 end
