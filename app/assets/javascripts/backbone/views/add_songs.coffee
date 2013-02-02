@@ -1,15 +1,14 @@
 class Ohgiri.Views.AddSongs extends Backbone.View
 
-  initialize: ->
-
   events:
     'click .add_song'   : 'addSong'
     'click .remove_song': 'removeSong'
 
   addSong: (e) ->
-    clone    = $(e.target).parent().clone()
-    video_id = $(e.target).parent().data('video-id')
-    topic_id = $(e.target).parent().data('topic-id')
+    target =  $(e.target)
+    clone    = target.parent().clone()
+    video_id = target.parent().data('video-id')
+    topic_id = target.parent().data('topic-id')
     clone.find('.add_song')
          .removeClass('add_song')
          .addClass('remove_song')
@@ -18,18 +17,26 @@ class Ohgiri.Views.AddSongs extends Backbone.View
     @saveToList topic_id, video_id
 
   removeSong: (e) ->
-    clone    = _.clone $(e.target).parent()
-    video_id = $(e.target).parent().data('video-id')
-    topic_id = $(e.target).parent().data('topic-id')
-    clone.find('.remove_song')
-         .removeClass('remove_song')
-         .addClass('add_song')
-         .attr('value','add')
-    # $("#search_result").prepend clone
+    target =  $(e.target)
+    video_id = target.parent().data('video-id')
+    topic_id = target.parent().data('topic-id')
+    @removeFromList topic_id, video_id
+    target.parent().remove()
+
 
   saveToList: (topic_id, video_id) ->
     $.ajax
       url: "/playlist/#{topic_id}/add/#{video_id}.json"
+      type: 'get'
+      dataType: 'json'
+      error: (jqXHR, textStatus, errorThrown) ->
+        alert 'error'
+      success: (data) ->
+        console.log data
+
+  removeFromList: (topic_id, video_id) ->
+    $.ajax
+      url: "/playlist/#{topic_id}/remove/#{video_id}.json"
       type: 'get'
       dataType: 'json'
       error: (jqXHR, textStatus, errorThrown) ->
