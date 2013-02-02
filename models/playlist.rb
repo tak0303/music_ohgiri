@@ -8,15 +8,15 @@ class Playlist < ActiveRecord::Base
         p_list = Playlist.find_by_user_id_and_topic_id current_account.id, info[:topic_id]
         unless p_list.present?
           Playlist.new({
-            topic_id: info[:topic_id],
-            user_id: current_account.id
+            topic_id: info[:topic_id].to_i,
+            user_id: current_account.id.to_i
           }).save
           p_list = Playlist.find_by_user_id_and_topic_id current_account.id, info[:topic_id]
         end
         video_info = YouTubeIt::Client.new.video_by info[:video_id]
         Video.find_or_create_by_video_id_and_playlist_id({
           video_id: info[:video_id],
-          playlist_id: p_list.id,
+          playlist_id: p_list.id.to_i,
           title: video_info.title,
           thumbnail_url: video_info.thumbnails[1].url,
           embed_url: video_info.embed_url
